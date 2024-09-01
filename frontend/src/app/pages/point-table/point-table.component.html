@@ -1,0 +1,53 @@
+<div class="table-container">
+   
+    <h1 class="text-4xl font-bold text-slate-800 bg-white w-full p-4 ">Points Table</h1>
+    <!-- <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+        <thead class="bg-gray-800 text-white">
+            <tr>
+                @for (heading of tableHeading; track $index) {
+                <th class="py-3 px-4 border-b">{{heading}}</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (team of tableHeading; track $index) {
+                <tr class="hover:bg-gray-100">
+                     <td class="py-3 px-4 border-b">2</td>
+                    <td class="py-3 px-4 border-b">2</td>
+                    <td class="py-3 px-4 border-b">2</td>
+                    <td class="py-3 px-4 border-b">2</td> -->
+               <!-- @for (data of team; track $index) {
+                <td class="py-3 px-4 border-b">2</td>
+               }
+                
+            </tr>
+        }
+            <tr class="hover:bg-gray-100">
+                <td class="py-3 px-4 border-b">2</td>
+                
+            </tr>
+             Add more rows as needed -->
+        <!-- </tbody>
+    </table> -->
+    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <!-- Correctly formatted @for loop for table headings -->
+            @for (heading of tableHeading; track $index) {
+              <th class="py-3 px-4 border-b">{{ heading }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Correctly formatted @for loop for table rows -->
+          @for (team of pointTable; track $index) {
+            <tr class="hover:bg-gray-100">
+              @for (data of team; track $index) {
+                <td class="py-3 px-4 border-b">{{ data }}</td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+
+</div>
